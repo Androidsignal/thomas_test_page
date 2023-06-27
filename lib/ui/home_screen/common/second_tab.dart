@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:test_page/constants/color_constants.dart';
-import 'package:test_page/ui/home_screen/home_screen_mobile.dart';
+import 'package:test_page/ui/home_screen/mobile_designs/home_screen_mobile.dart';
 
 class SecondTab extends StatelessWidget {
   SecondTab({Key? key}) : super(key: key);
@@ -12,7 +12,7 @@ class SecondTab extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      constraints: BoxConstraints(
+      constraints: const BoxConstraints(
         maxWidth: 500
       ),
       child: Column(

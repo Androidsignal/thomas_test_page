@@ -3,7 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:test_page/constants/color_constants.dart';
 import 'package:test_page/ui/home_screen/common/second_tab.dart';
-import 'package:test_page/ui/home_screen/home_screen_mobile.dart';
+import 'package:test_page/ui/home_screen/mobile_designs/home_screen_mobile.dart';
 import 'package:test_page/ui/home_screen/common/first_tab.dart';
 
 import '../common/third_tab.dart';

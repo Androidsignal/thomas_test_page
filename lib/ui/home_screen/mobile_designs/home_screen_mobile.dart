@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:test_page/ui/home_screen/mobile_designs/arbeitgeber_screen_mobile.dart';
+import 'package:test_page/ui/home_screen/mobile_designs/arbeitnehmer_screen_mobile.dart';
+import 'package:test_page/ui/home_screen/mobile_designs/temporarburo_screen_mobile.dart';
 
-import '../../constants/color_constants.dart';
-import '../arbeitgeber_screen/arbeitgeber_screen_adapter.dart';
-import '../arbeitnehmer_screen/arbeitnehmer_screen_adapter.dart';
-import '../temporarburo_screen/temporarburo_screen_adapter.dart';
-import 'widgets/button_widget.dart';
+import '../../../constants/color_constants.dart';
+import '../widgets/button_widget.dart';
 
 class HomeScreenMobile extends StatefulWidget {
   const HomeScreenMobile({super.key});
@@ -22,7 +22,7 @@ class _HomeScreenMobileState extends State<HomeScreenMobile> with SingleTickerPr
   void _scrollDown() {
     _controller.animateTo(
       0,
-      duration: Duration(milliseconds: 300),
+      duration: const Duration(milliseconds: 300),
       curve: Curves.easeInOut,
     );
   }
@@ -139,12 +139,12 @@ class _HomeScreenMobileState extends State<HomeScreenMobile> with SingleTickerPr
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Container(
               height: 45,
-              margin: EdgeInsets.symmetric(horizontal: 20),
+              margin: const EdgeInsets.symmetric(horizontal: 20),
               decoration: BoxDecoration(
                 color: ColorConstants.getInstance().whiteColor,
                 border: Border.all(color: ColorConstants.getInstance().borderColor, width: 0.8),
@@ -174,11 +174,9 @@ class _HomeScreenMobileState extends State<HomeScreenMobile> with SingleTickerPr
                   fontWeight: FontWeight.bold,
                   letterSpacing: 0.84,
                 ),
-                tabs: [
-                  Container(
-                    child: Tab(
-                      text: 'Arbeitnehmer',
-                    ),
+                tabs: const [
+                  Tab(
+                    text: 'Arbeitnehmer',
                   ),
                   Tab(
                     text: 'Arbeitgeber',
@@ -189,17 +187,17 @@ class _HomeScreenMobileState extends State<HomeScreenMobile> with SingleTickerPr
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 30,
             ),
             SizedBox(
               height: MediaQuery.of(context).size.height * 1.5,
               child: TabBarView(
                 controller: _tabController,
-                children: [
-                  ArbeithnehmerScreenAdapter(),
-                  ArbeitgeberScreenAdapter(),
-                  TemporarburoScreenAdapter(),
+                children: const [
+                  ArbeithnehmerScreenMobile(),
+                  ArbeitgeberScreenMobile(),
+                  TemporarburoScreenMobile(),
                 ],
               ),
             )

@@ -6,7 +6,7 @@ class GradientButton extends StatelessWidget {
   final String text;
   final VoidCallback onPressed;
 
-  GradientButton({required this.text, required this.onPressed});
+  const GradientButton({super.key, required this.text, required this.onPressed});
 
   @override
   Widget build(BuildContext context) {
@@ -14,6 +14,7 @@ class GradientButton extends StatelessWidget {
       child: Container(
         width: double.maxFinite,
         height: 40.0,
+        // ignore: prefer_const_constructors
         margin: EdgeInsets.symmetric(horizontal: 40),
         decoration: BoxDecoration(
           gradient: LinearGradient(
@@ -26,7 +27,7 @@ class GradientButton extends StatelessWidget {
         child: ElevatedButton(
           onPressed: onPressed,
           style: ElevatedButton.styleFrom(
-            primary: Colors.transparent,
+            backgroundColor: Colors.transparent,
             elevation: 0,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(12.0),

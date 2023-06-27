@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:test_page/constants/color_constants.dart';
-import 'package:test_page/ui/home_screen/home_screen_mobile.dart';
+import 'package:test_page/ui/home_screen/mobile_designs/home_screen_mobile.dart';
 
 
 class FirstTab extends StatelessWidget {
@@ -13,7 +13,7 @@ class FirstTab extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      constraints: BoxConstraints(maxWidth: 500),
+      constraints: const BoxConstraints(maxWidth: 500),
       child: Column(
         children: [
           const SizedBox(height: 50),
@@ -197,7 +197,7 @@ class PathPainter extends CustomPainter {
       ..style = PaintingStyle.stroke
       ..strokeWidth = 3.0;
 
-    canvas.drawPath(this.path, paint);
+    canvas.drawPath(path, paint);
   }
 
   @override

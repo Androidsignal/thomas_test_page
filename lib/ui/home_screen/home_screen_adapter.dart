@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
-import 'package:test_page/ui/home_screen/web_design/home_screen_web.dart';
+import 'package:test_page/ui/home_screen/web_designs/home_screen_web.dart';
 
-import 'home_screen_mobile.dart';
+import 'mobile_designs/home_screen_mobile.dart';
 import 'tab_designs/home_screen_tab.dart';
 
 class HomeScreenAdapter extends StatefulWidget {
